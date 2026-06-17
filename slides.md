@@ -2,7 +2,6 @@
 theme: default
 title: 'Скиллы: как создавать, улучшать и распространять на команды'
 titleTemplate: '%s'
-routerMode: hash
 colorSchema: all
 highlighter: shiki
 lineNumbers: false
