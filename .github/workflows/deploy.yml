@@ -29,6 +29,9 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - name: Fix Slidev base-path navigation (workaround for 52.14+ getSlidePath bug)
+        run: node scripts/fix-slidev-base.mjs
+
       - name: Build
         run: pnpm exec slidev build --base /${{ github.event.repository.name }}/ --out dist
 

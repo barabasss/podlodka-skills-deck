@@ -98,11 +98,16 @@ class: text-center
 class: p-0
 ---
 
+<script setup>
+// public-ассеты должны учитывать --base (на GitHub Pages /podlodka-skills-deck/)
+const baseUrl = import.meta.env.BASE_URL
+</script>
+
 <div class="relative h-full w-full">
   <iframe class="w-full h-full border-0" src="https://skill-visualization.vercel.app"></iframe>
 
   <div class="absolute bottom-4 right-4 z-10 flex flex-col items-center gap-1 rounded-xl bg-white p-2 shadow-lg">
-    <img :src="'/qr-demo.png'" class="w-28 h-28" alt="QR на демо" />
+    <img :src="`${baseUrl}qr-demo.png`" class="w-28 h-28" alt="QR на демо" />
     <span class="text-xs text-gray-600">Открыть демо</span>
   </div>
 </div>
