@@ -33,7 +33,7 @@ jobs:
         run: pnpm exec slidev build --base /${{ github.event.repository.name }}/ --out dist
 
       - name: SPA fallback for GitHub Pages
-        run: cp dist/index.html dist/404.html
+        run: node scripts/spa-fallback.mjs
 
       - uses: actions/configure-pages@v5
 
