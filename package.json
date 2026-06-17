@@ -2,6 +2,7 @@
   "name": "skills-deck",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@11.5.2",
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",
